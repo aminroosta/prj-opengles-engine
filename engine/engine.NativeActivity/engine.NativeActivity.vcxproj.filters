@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="glue.h">
+      <Filter>glue</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="io.hpp">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>glue</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.hpp">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="obj_loader.h">
+      <Filter>glue</Filter>
+    </ClInclude>
+    <ClInclude Include="program_object.hpp">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh.hpp">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="data_structures.hpp">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="soil.h">
+      <Filter>glue</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundManager.hpp">
+      <Filter>app</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="glue.c">
+      <Filter>glue</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>glue</Filter>
+    </ClCompile>
+    <ClCompile Include="game.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="obj_loader.cpp">
+      <Filter>glue</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="glue">
+      <UniqueIdentifier>{f2b0e71b-eed9-4a75-82a0-7957f56d97bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app">
+      <UniqueIdentifier>{6dcc8c92-a661-4610-89cf-de3044aff08d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

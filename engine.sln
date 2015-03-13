@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22609.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "engine", "engine", "{E214236B-D69C-4A2F-BFE0-B7EF6688BDCE}"
+EndProject
+Project("{39E2626F-3545-4960-A6E8-258AD8476CE5}") = "engine.Packaging", "engine\engine.Packaging\engine.Packaging.androidproj", "{F419666E-569D-4306-8DC2-696FEFC5DA12}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "engine.NativeActivity", "engine\engine.NativeActivity\engine.NativeActivity.vcxproj", "{7DB432F6-05D8-470C-917A-E99269B9A6F5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "engine.Libjpeg", "engine\engine.Libjpeg\engine.Libjpeg.vcxproj", "{1CBAD643-DAC0-4A7F-8E57-258776D8C452}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F419666E-569D-4306-8DC2-696FEFC5DA12}.Debug|ARM.ActiveCfg = Debug|ARM
+		{F419666E-569D-4306-8DC2-696FEFC5DA12}.Debug|ARM.Build.0 = Debug|ARM
+		{F419666E-569D-4306-8DC2-696FEFC5DA12}.Debug|ARM.Deploy.0 = Debug|ARM
+		{F419666E-569D-4306-8DC2-696FEFC5DA12}.Debug|x86.ActiveCfg = Debug|x86
+		{F419666E-569D-4306-8DC2-696FEFC5DA12}.Debug|x86.Build.0 = Debug|x86
+		{F419666E-569D-4306-8DC2-696FEFC5DA12}.Debug|x86.Deploy.0 = Debug|x86
+		{F419666E-569D-4306-8DC2-696FEFC5DA12}.Release|ARM.ActiveCfg = Release|ARM
+		{F419666E-569D-4306-8DC2-696FEFC5DA12}.Release|ARM.Build.0 = Release|ARM
+		{F419666E-569D-4306-8DC2-696FEFC5DA12}.Release|ARM.Deploy.0 = Release|ARM
+		{F419666E-569D-4306-8DC2-696FEFC5DA12}.Release|x86.ActiveCfg = Release|x86
+		{F419666E-569D-4306-8DC2-696FEFC5DA12}.Release|x86.Build.0 = Release|x86
+		{F419666E-569D-4306-8DC2-696FEFC5DA12}.Release|x86.Deploy.0 = Release|x86
+		{7DB432F6-05D8-470C-917A-E99269B9A6F5}.Debug|ARM.ActiveCfg = Debug|ARM
+		{7DB432F6-05D8-470C-917A-E99269B9A6F5}.Debug|ARM.Build.0 = Debug|ARM
+		{7DB432F6-05D8-470C-917A-E99269B9A6F5}.Debug|x86.ActiveCfg = Debug|x86
+		{7DB432F6-05D8-470C-917A-E99269B9A6F5}.Debug|x86.Build.0 = Debug|x86
+		{7DB432F6-05D8-470C-917A-E99269B9A6F5}.Release|ARM.ActiveCfg = Release|ARM
+		{7DB432F6-05D8-470C-917A-E99269B9A6F5}.Release|ARM.Build.0 = Release|ARM
+		{7DB432F6-05D8-470C-917A-E99269B9A6F5}.Release|x86.ActiveCfg = Release|x86
+		{7DB432F6-05D8-470C-917A-E99269B9A6F5}.Release|x86.Build.0 = Release|x86
+		{1CBAD643-DAC0-4A7F-8E57-258776D8C452}.Debug|ARM.ActiveCfg = Debug|ARM
+		{1CBAD643-DAC0-4A7F-8E57-258776D8C452}.Debug|ARM.Build.0 = Debug|ARM
+		{1CBAD643-DAC0-4A7F-8E57-258776D8C452}.Debug|x86.ActiveCfg = Debug|x86
+		{1CBAD643-DAC0-4A7F-8E57-258776D8C452}.Debug|x86.Build.0 = Debug|x86
+		{1CBAD643-DAC0-4A7F-8E57-258776D8C452}.Release|ARM.ActiveCfg = Release|ARM
+		{1CBAD643-DAC0-4A7F-8E57-258776D8C452}.Release|ARM.Build.0 = Release|ARM
+		{1CBAD643-DAC0-4A7F-8E57-258776D8C452}.Release|x86.ActiveCfg = Release|x86
+		{1CBAD643-DAC0-4A7F-8E57-258776D8C452}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F419666E-569D-4306-8DC2-696FEFC5DA12} = {E214236B-D69C-4A2F-BFE0-B7EF6688BDCE}
+		{7DB432F6-05D8-470C-917A-E99269B9A6F5} = {E214236B-D69C-4A2F-BFE0-B7EF6688BDCE}
+		{1CBAD643-DAC0-4A7F-8E57-258776D8C452} = {E214236B-D69C-4A2F-BFE0-B7EF6688BDCE}
+	EndGlobalSection
+EndGlobal

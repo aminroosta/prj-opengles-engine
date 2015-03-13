@@ -1,0 +1,10 @@
+ARM/
+x86/
+ipch/
+engine/engine.Libjpeg/ARM/
+engine/engine.Libjpeg/x86/
+engine/engine.NativeActivity/ARM/
+engine/engine.NativeActivity/x86/
+engine/engine.Packaging/obj/
+engine.opensdf
+engine.sdf
