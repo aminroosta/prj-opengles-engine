@@ -208,6 +208,9 @@ public:
 
 	Indices indices;
 
+	void use_me() {
+		glUseProgram(this->id);
+	}
 	void draw() {
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indices.buffer_id);
 		glDrawElements(GL_TRIANGLES, indices.num_indices, GL_UNSIGNED_SHORT, (void *)0);

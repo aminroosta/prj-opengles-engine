@@ -68,6 +68,7 @@
     <Content Include="assets\background.mp3" />
     <Content Include="assets\bad_death.mp3" />
     <Content Include="assets\bad_death.wav" />
+    <Content Include="assets\cube.jpg" />
     <Content Include="assets\cube.mtl" />
     <Content Include="assets\cube.obj" />
     <Content Include="assets\text.txt" />

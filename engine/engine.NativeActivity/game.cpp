@@ -7,19 +7,21 @@ void Game::start() {
 	sound_manager.start();
 }
 
-vector<Mesh*> meshes;
+
+map<string, MeshBase*> meshes;
 void Game::pause() {
 	LOGI("Game::pause();");
 
 	for (auto& mesh : meshes)
-		delete mesh;
+		delete mesh.second;
 	meshes.clear();
 }
 
 class CubeMesh : public Mesh {
 public:
-	CubeMesh()
+	CubeMesh(const std::string& obj_file)
 		: Mesh(
+		obj_file,
 		// ================= vertex shader  ====================
 		GLSL(
 	uniform mat4 mvp;
@@ -39,20 +41,36 @@ public:
 		gl_FragColor = texture2D(texture, _uv);
 	})
 		) { }
-	virtual void initialize(const string& name) override {
-		Mesh::initialize(name);
+
+	virtual void init() override {
+		Mesh::init();
 
 		program_obj.attrib("uv").buffer_data(2, mesh.texcoords.size() / 2, &mesh.texcoords[0]);
-		program_obj.texture("texture").image2d("texture.png");
+		program_obj.texture("texture").image2d("cube.jpg");
 	}
-	virtual void draw(const mat4& mvp) override {
-		glUseProgram(program_obj.id);
 
+	glm::mat4 mvp;
+
+protected:
+	virtual void before_draw() override {
+		Mesh::before_draw();
+
+		program_obj.uniform("mvp").set(&mvp[0][0]);
 		program_obj.attrib("uv").enable();
 		program_obj.texture("texture").enable();
-
-		Mesh::draw(mvp);
 	}
+};
+
+class TemperatureMesh : public MeshBase {
+public:
+	TemperatureMesh() : MeshBase(
+		// ================= vertex shader  ====================
+		GLSL(),
+		// ================= fragment shader  ====================
+		GLSLF()
+		) { }
+
+protected:
 };
 
 void Game::onTouch(std::vector<touch_pointer_t> pointers) {
@@ -71,8 +89,10 @@ void Game::onTouch(std::vector<touch_pointer_t> pointers) {
 
 void Game::resume() {
 	LOGI("Game::resume();");
-	meshes.push_back(new CubeMesh());
-	meshes.front()->initialize("tex_cube.obj");
+
+	meshes["cube"] = new CubeMesh("tex_cube.obj");
+	meshes["cube"]->init();
+
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_CULL_FACE);
 	glClearDepthf(1.0);
@@ -95,11 +115,13 @@ void Game::draw() {
 
 	mvp = mvp * glm::rotate((float)angle, vec3(1 - 0.3, 1 - delta, -1 + 5 * delta));
 
-	for (auto& mesh : meshes)
-		mesh->draw(mvp);
+	((CubeMesh*)meshes["cube"])->mvp = mvp;
+
+	for (const auto& mesh : meshes) {
+		mesh.second->draw();
+	}
 }
 
 
 Timer Game::timer;
 game_state Game::state;
-

@@ -21,6 +21,7 @@
 #include <memory>
 #include <string>
 #include <vector>
+#include <map>
 #include <cmath>
 
 #include <android/log.h>
@@ -39,6 +40,7 @@
 // external library headers
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
+#include "glm/gtc/type_ptr.hpp"
 #include "glm/gtx/transform.hpp"
 #include "soil.h"
 
